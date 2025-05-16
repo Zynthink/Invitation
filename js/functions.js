@@ -195,8 +195,8 @@
 
 	// Countdown
 	setInterval(function() {
-		var target = new Date("May 24 2025 08:00:00 GMT+0100"); //replace with YOUR DATE
-		// var now = new Date("May 24 2025 08:00:00 GMT+0100");
+		// var target = new Date("May 24 2025 08:00:00 GMT+0100"); //replace with YOUR DATE
+		var now = new Date("2025-05-24T08:00:00+01:00");
 		var difference = Math.floor((target.getTime() - now.getTime()) / 1000);
 
 		var seconds = fixIntegers(difference % 60);
