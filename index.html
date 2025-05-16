@@ -424,3 +424,41 @@
 
 </body>
 </html>
+
+<script>
+    // Waktu target acara (May 24, 2025, jam 08:00 pagi GMT+1)
+    var target = new Date("2025-05-24T08:00:00+01:00");
+
+    function updateCountdown() {
+        var now = new Date();
+        var diff = target - now;
+
+        if (diff <= 0) {
+            document.getElementById("days").innerHTML = "00";
+            document.getElementById("hours").innerHTML = "00";
+            document.getElementById("minutes").innerHTML = "00";
+            document.getElementById("seconds").innerHTML = "00";
+            return;
+        }
+
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerHTML = pad(days);
+        document.getElementById("hours").innerHTML = pad(hours);
+        document.getElementById("minutes").innerHTML = pad(minutes);
+        document.getElementById("seconds").innerHTML = pad(seconds);
+    }
+
+    // Tambahkan nol di depan kalau angka cuma 1 digit
+    function pad(num) {
+        return num < 10 ? "0" + num : num;
+    }
+
+    // Update setiap detik
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // panggil sekali langsung saat halaman load
+</script>
+
