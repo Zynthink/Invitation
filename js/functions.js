@@ -197,7 +197,7 @@
 	setInterval(function() {
 		// var target = new Date("May 23 2026 08:00:00 GMT+0100"); //replace with YOUR DATE
 		
-		var target = new Date("2025-05-24T08:00:00+07:00");
+		var target = new Date("2026-05-23T08:00:00+07:00");
 		var difference = Math.floor((target.getTime() - now.getTime()) / 1000);
 
 		var seconds = fixIntegers(difference % 60);
