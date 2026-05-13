@@ -417,7 +417,7 @@
 
     // --- PERBAIKAN COUNTDOWN DI SINI ---
     setInterval(function() {
-        var now = new Date(); // <--- WAJIB ADA: Mengambil waktu sekarang
+        // var now = new Date(); // <--- WAJIB ADA: Mengambil waktu sekarang
         var target = new Date("2026-05-23T08:00:00+07:00");
         
         var difference = Math.floor((target.getTime() - now.getTime()) / 1000);
